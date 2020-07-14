@@ -100,7 +100,7 @@ export class Question {
 }
 ```
 
-`categories`는 Promise 입니다. 이는 lazy 하고 값이 존재하는 Promise만 저장할 수 있다는 뜻입니다.
+`categories`는 Promise 입니다. 이는 게으르고 값이 존재하는 Promise만 저장할 수 있다는 뜻입니다.
 
 이러한 관계를 저장하는 방법 예시 :
 
@@ -126,4 +126,4 @@ const categories = await question.categories;
 // 이제 모든 questions의 categories가 변수 "categories"에 포함됩니다.
 ```
 
-참고: 다른 언어(JAVA, PHP, etc.)에서 왔으며 게으른 관계를 사용하는데 익숙하다면 주의하십시오. 그 언어들은 비동기적이지 않고 게으른 로딩은 다른 방식으로 이루어지기 때문에 Promise와 함께 작동하지 않습니다. JavaScript 및 NodeJs에서는 지연로드 관계를 사용하려면 promise를 사용해야 합니다. 이는 비표준 기술이며 TypeORM에서 실험적인 것으로 간주됩니다.
+참고: 다른 언어(JAVA, PHP, etc.)에서 왔으며 게으른 관계를 사용하는데 익숙하다면 주의하십시오. 그 언어들은 비동기적이지 않고, 게으른 로딩은 다른 방식으로 이루어지기 때문에 Promise와 함께 작동하지 않습니다. JavaScript 및 NodeJs에서는 지연로드 관계를 사용하려면 promise를 사용해야 합니다. 이는 비표준 기술이며 TypeORM에서 실험적인 것으로 간주됩니다.
