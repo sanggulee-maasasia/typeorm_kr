@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactMarkDown from 'react-markdown';
-import * as markdownPath from '../docs/caching.md';
+import * as markdownPath from '../docs/QueryBuilder/caching.md';
 import './css/Markdown.scss';
 
 const Markdown = () => {

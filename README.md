@@ -26,13 +26,13 @@
 TypeORM은 NodeJs, Browser, Cordova, PhoneGap, Ionic, React Native, NativeScript, Expo, Electron 플랫폼에서 실행할 수 있는 [ORM](https://en.wikipedia.org/wiki/Object-relational_mapping)으로, Typescript와 Javascript(ES5,ES6,ES7,ES8)로 사용할 수 있습니다.
 우리의 목표는 항상 최신 Javascript 기능을 지원하고 테이블이 몇 개 없는 작은 애플리케이션부터 다중 데이터베이스를 사용하는 대규모 엔터프라이즈 애플리케이션까지 데이터베이스를 사용하는 모든 종류의 애플리케이션을 개발할 수 있도록 추가 기능을 제공하는 것입니다.
 
-TypeORM은 현존하는 Javascript ORM들과는 다르게, [Active Record](./src/docs/guides/active-record-data-mapper.md#Active-Record-패턴이란?), [Data Mapper](./src/docs/guides/active-record-data-mapper.md#Data-mapper-패턴이란?) 패턴을 지원합니다. 이는 여러분들이 높은 퀄리티의 느슨한 결합을 지원하고 확장가능하며 유지보수가 가능한 애플리케이션을 가장 생산적인 방법으로 작성할 수 있다는것을 의미합니다.
+TypeORM은 현존하는 Javascript ORM들과는 다르게, [Active Record](./src/docs/guides/active-record-data-mapper.md#Active-Record-패턴이란), [Data Mapper](./src/docs/guides/active-record-data-mapper.md#Data-mapper-패턴이란) 패턴을 지원합니다. 이는 여러분들이 높은 퀄리티의 느슨한 결합을 지원하고 확장가능하며 유지보수가 가능한 애플리케이션을 가장 생산적인 방법으로 작성할 수 있다는것을 의미합니다.
 
 TypeORM은 [Hibernate](http://hibernate.org/orm/), [Doctrine](http://www.doctrine-project.org/), [Entity Framework](https://www.asp.net/entity-framework)와 같은 ORM들에 많은 영향을 받았습니다.
 
 TypeORM의 몇가지 특징을 꼽자면 :
 
-- [DataMapper](./src/docs/guides/active-record-data-mapper.md#Data-mapper-패턴이란?)와 [ActiveRecord](./src/docs/guides/active-record-data-mapper.md#Active-Record-패턴이란?) 둘다 지원합니다. (선택하세요)
+- [DataMapper](./src/docs/guides/active-record-data-mapper.md#Data-mapper-패턴이란)와 [ActiveRecord](./src/docs/guides/active-record-data-mapper.md#Active-Record-패턴이란) 둘다 지원합니다. (선택하세요)
 - entities와 columns
 - 데이터베이스별 column 타입들
 - 엔티티 관리자(Entity manager)
@@ -204,7 +204,7 @@ await timber.remove();
 
 - **NativeScript**, **react-native**이거나 **Cordova**의 경우
 
-  [지원되는 플랫폼](./docs/supported-platforms.md)을 확인하십시오.
+  [지원되는 플랫폼](https://github.com/typeorm/typeorm/blob/master/docs/supported-platforms.md)을 확인하십시오.
 
 사용할 데이터베이스에 따라 이중에서 _하나만_ 설치하십시오.
 

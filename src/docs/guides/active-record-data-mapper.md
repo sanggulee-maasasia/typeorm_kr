@@ -1,8 +1,8 @@
 # Active Record vs Data Mapper
 
-- [Active Record 패턴이란?](#Active-Record-패턴이란?)
-- [Data Mapper 패턴이란?](#Data-Mapper-패턴이란?)
-- [어떤걸 선택해야 하나요?](#어떤걸-선택해야-하나요?)
+- [Active Record 패턴이란?](#Active-Record-패턴이란)
+- [Data Mapper 패턴이란?](#Data-Mapper-패턴이란)
+- [어떤걸 선택해야 하나요?](#어떤걸-선택해야-하나요)
 
 ## Active Record 패턴이란?
 
