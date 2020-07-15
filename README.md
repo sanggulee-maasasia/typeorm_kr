@@ -91,7 +91,7 @@ export class User {
 }
 ```
 
-도메인 논리는 다음과 같습니다:
+도메인 로직은 다음과 같습니다:
 
 ```typescript
 const user = new User();
@@ -107,7 +107,7 @@ const timber = await repository.findOne({ firstName: 'Timber', lastName: 'Saw' }
 await repository.remove(timber);
 ```
 
-또는 `ActiveRecord`를 사용한다면, 다음을 사용 할 수도 있습니다:
+`ActiveRecord`를 사용한다면, 다음을 사용 할 수도 있습니다:
 
 ```typescript
 import { Entity, PrimaryGeneratedColumn, Column, BaseEntity } from 'typeorm';
@@ -128,7 +128,7 @@ export class User extends BaseEntity {
 }
 ```
 
-도메인 논리는 다음과 같습니다:
+도메인 로직은 다음과 같습니다:
 
 ```typescript
 const user = new User();
@@ -146,7 +146,7 @@ await timber.remove();
 
 ## 설치
 
-1. npm 패키지를 설치하십시오 :
+1. npm 패키지를 설치하세요 :
 
    `npm install typeorm --save`
 
@@ -162,7 +162,7 @@ await timber.remove();
 
    `npm install @types/node --save`
 
-4. 데이터베이스 드라이버를 설치하십시오:
+4. 데이터베이스 드라이버를 설치하세요:
 
    - **MySQL**이거나 **MariaDB**의 경우
 
@@ -204,13 +204,13 @@ await timber.remove();
 
 - **NativeScript**, **react-native**이거나 **Cordova**의 경우
 
-  [지원되는 플랫폼](https://github.com/typeorm/typeorm/blob/master/docs/supported-platforms.md)을 확인하십시오.
+  [지원되는 플랫폼](https://github.com/typeorm/typeorm/blob/master/docs/supported-platforms.md)을 확인하세요.
 
-사용할 데이터베이스에 따라 이중에서 _하나만_ 설치하십시오.
+사용할 데이터베이스에 따라 이중에서 _하나만_ 설치하세요.
 
 ##### TypeScript 설정
 
-타입스크립트 버전이 **3.3**보다 높은지 확인하십시오, 그리고 `tsconfig.json`에서 다음 설정을 사용하도록 했는지 확인하십시오:
+타입스크립트 버전이 **3.3**보다 높은지 확인하고, `tsconfig.json`에서 다음 설정을 사용하도록 했는지 확인하세요 :
 
 ```json
 "emitDecoratorMetadata": true,
@@ -221,7 +221,7 @@ await timber.remove();
 
 ## 빠른 시작
 
-TypeORM을 시작하는 가장 빠른 방법은 CLI 커맨드를 사용하여 시작 프로젝트를 만드는 것입니다. 빠른 시작은 Nodejs 애플리케이션에서 TypeORM을 사용할때만 작동합니다. 다른 플랫폼을 사용중일경우 [단계별 지침서](#단계별-지침서)를 진행하십시오.
+TypeORM을 시작하는 가장 빠른 방법은 CLI 커맨드를 사용하여 시작 프로젝트를 만드는 것입니다. 빠른 시작은 Nodejs 애플리케이션에서 TypeORM을 사용할때만 작동합니다. 다른 플랫폼을 사용중일 경우 [단계별 지침서](#단계별-지침서)를 진행하세요.
 
 먼저, TypeORM을 전역적으로 설치합니다 :
 
@@ -229,14 +229,14 @@ TypeORM을 시작하는 가장 빠른 방법은 CLI 커맨드를 사용하여 �
 npm install typeorm -g
 ```
 
-그 다음, 새 프로젝트를 만들고싶은 경로에 가서 다음 커맨드를 실행하십시오 :
+그 다음, 새 프로젝트를 만들고싶은 경로에 가서 다음 커맨드를 실행하세요 :
 
 ```
 typeorm init --name MyProject --database mysql
 ```
 
 여기서 `name`은 여러분의 프로젝트 혹은 데이터베이스 이름을, `database`는 여러분이 사용할 데이터베이스입니다.
-데이터베이스는 다음 값들 중 하나가 될 수 있습니다 : `mysql`, `mariadb`, `postgres`, `cockroachdb`, `sqlite`, `mssql`, `oracle`, `mongodb`,
+데이터베이스는 다음 중 하나가 될 수 있습니다 : `mysql`, `mariadb`, `postgres`, `cockroachdb`, `sqlite`, `mssql`, `oracle`, `mongodb`,
 `cordova`, `react-native`, `expo`, `nativescript`.
 
 이 명령은 다음 파일을 사용하여 `MyProject` 디렉토리에 새 프로젝트를 생성합니다 :
@@ -255,7 +255,7 @@ MyProject
 └── tsconfig.json    // Typescript 컴파일러 설정
 ```
 
-> 기존의 node 프로젝트에서도 `typeorm init` 명령을 사용할수 있지만, 이미 존재하는 일부 파일을 재정의 할 수 있으니 주의하십시오.
+> 기존의 node 프로젝트에서도 `typeorm init` 명령을 사용할수 있지만, 이미 존재하는 일부 파일을 재정의 할 수 있으니 주의하세요.
 
 다음 단계는 새로운 프로젝트 종속성을 설치해보는 것입니다:
 
@@ -264,7 +264,7 @@ cd MyProject
 npm install
 ```
 
-설치가 진행되는 동안, `ormconfig.json`파일을 편집하고 데이터베이스 connection 설정을 넣으십시오:
+설치가 진행되는 동안, `ormconfig.json`파일을 편집하고 데이터베이스 connection 설정을 추가하세요:
 
 ```json
 {
@@ -284,7 +284,7 @@ npm install
 
 대부분의 경우 `host`, `username`, `password`, `database` 그리고 `port` 설정만 하면 됩니다.
 
-설정과 모든 node 모듈이 설치되면, 애플리케이션을 실행할 수 있습니다:
+설정과 모든 node 모듈 설치기 완료되면, 애플리케이션을 실행할 수 있습니다:
 
 ```
 npm start
@@ -296,7 +296,7 @@ npm start
 
 ## 단계별 지침서
 
-ORM에게 무엇을 기대하고 있습니까? 우선, 유지 관리하기 어려운 SQL쿼리를 많이 작성하지 않고도 데이터베이스 테이블을 생성하고, 검색/삽입/업데이트/삭제 할 수 있습니다. 이 안내서에서는 어떻게 처음부터 Typeorm을 설정하고 ORM에서 기대한 것을 수행하는 방법을 보여줍니다.
+ORM에게 무엇을 기대하고 있나요? 우선, 유지 관리하기 어려운 SQL쿼리를 많이 작성하지 않고도 데이터베이스 테이블을 생성하고, 검색 / 삽입 / 업데이트 / 삭제 할 수 있습니다. 이 안내서에서는 어떻게 Typeorm을 설정하고 ORM에서 기대한 것을 수행하는 방법을 보여줍니다.
 
 ### 모델(Model) 생성
 
@@ -374,7 +374,7 @@ export class Photo {
 
 ### 기본 열 만들기
 
-각 엔티티는 기본 키를 가진 열이 하나 이상 `존재해야합니다`. 이건 요구사항이며 반드시 지켜야합니다. 열을 기본 키로 바꾸려면 `@PrimaryColumn` 데코레이터를 사용해야 합니다.
+각 엔티티는 기본 키를 가진 열이 하나 이상 `존재해야합니다`. 이는 필요조건이며 반드시 지켜야합니다. 열을 기본 키로 바꾸려면 `@PrimaryColumn` 데코레이터를 사용해야 합니다.
 
 ```typescript
 import { Entity, Column, PrimaryColumn } from 'typeorm';
@@ -432,7 +432,7 @@ export class Photo {
 
 ### 열 데이터 타입
 
-다음으로, 데이터 타입을 수정해봅시다. 기본적으로, string은 varchar(255)와 유사한 타입으로 매핑됩니다 (데이터베이스 유형에따라 달라질 수 있습니다). Number는 interger랑 유사한 타입으로 매핑됩니다 (데이터베이스 유형에따라 달라질 수 있습니다). 우리는 열들이 varchar나 interger로 한정되는것을 원하지 않습니다. 올바른 데이터 타입을 설정합시다:
+다음으로, 데이터 타입을 수정해봅시다. 기본적으로, string은 varchar(255)와 유사한 타입으로 매핑됩니다 (데이터베이스 유형에따라 달라질 수 있습니다). Number는 interger랑 유사한 타입으로 매핑됩니다 (데이터베이스 유형에따라 달라질 수 있습니다). 우리는 열들이 varchar나 interger로 한정되는것을 원하지 않습니다. 올바른 데이터 타입을 설정해봅시다:
 
 ```typescript
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
@@ -490,11 +490,11 @@ createConnection({
   .catch((error) => console.log(error));
 ```
 
-이 예제에서는 MySQL을 사용했지만, 지원되는 다른 데이터베이스는 모두 사용 가능합니다.
-다른 데이터베이스를 사용하려면, 단순히 `type` 옵션을 사용할 다른 데이터베이스로 바꾸면 됩니다: `mysql`, `mariadb`, `postgres`, `cockroachdb`, `sqlite`, `mssql`, `oracle`, `cordova`, `nativescript`, `react-native`, `expo` 또는 `mongodb`.
+이 예제에서는 MySQL을 사용했지만, 지원되는 다른 데이터베이스도 모두 사용 가능합니다.
+다른 데이터베이스를 사용하려면, 단순히 `type` 옵션의 값을 사용할 다른 데이터베이스의 이름으로 바꾸면 됩니다: `mysql`, `mariadb`, `postgres`, `cockroachdb`, `sqlite`, `mssql`, `oracle`, `cordova`, `nativescript`, `react-native`, `expo` 또는 `mongodb`.
 또한 자신의 호스트, 포트, 사용자 이름, 비밀번호 및 데이터베이스 설정을 사용해야 합니다.
 
-이 connection의 엔티티 리스트에 Photo 엔티티를 추가했습니다. 이 connection에 사용중인 엔티티들은 모두 리스트에 나열되어 있어야합니다.
+이 connection의 엔티티 리스트에 Photo 엔티티를 추가했습니다. 이 connection에 사용중인 각각의 엔티티들은 모두 리스트에 나열되어 있어야합니다.
 
 `synchronize`를 설정하면 애플리케이션이 실행할때마다 엔티티와 데이터베이스가 동기화됩니다. (migration)
 
@@ -591,7 +591,7 @@ createConnection(/*...*/)
 
 ### 엔티티 관리자(EntityManager) 사용하기
 
-우리는 새 사진을 만들어서 데이터베이스에 저장했습니다. 그걸 저장하기 위해 `EntityManager`를 사용했었죠. entity manager를 사용하면 앱에 존재하는 모든 entity를 조작할 수 있습니다. 예를 들어, 저장된 엔티티를 불러온다고 하면 :
+우리는 새 사진을 만들어서 데이터베이스에 저장했습니다. 그걸 저장하기 위해 `EntityManager`를 사용했었습니다. entity manager를 사용하면 앱에 존재하는 모든 entity를 조작할 수 있습니다. 예를 들어, 저장된 엔티티를 불러온다고 하면 :
 
 ```typescript
 import { createConnection } from 'typeorm';
@@ -675,7 +675,7 @@ createConnection(/*...*/)
 
 ### 데이터베이스에서 데이터 업데이트
 
-이제 데이터베이스에서 단일 사진을 가져오고 난 뒤에 업데이트 후 저장해 보겠습니다 :
+이제 데이터베이스에서 하나의 사진을 가져오고 난 뒤에 업데이트 후 저장해 보겠습니다 :
 
 ```typescript
 import { createConnection } from 'typeorm';
@@ -749,9 +749,9 @@ export class PhotoMetadata {
 
 여기에는 `@OneToOne`이라는 새로운 데코레이터가 사용됐습니다. 이 데코레이터는 두 엔티티 사이에서 일대일 관계를 맺도록 만들어줍니다. `type => Photo`는 관계를 맺고자하는 엔티티의 클래스를 반환하는 함수입니다. 언어의 특수성 때문에 클래스를 직접 사용하는 대신에 클래스를 반환하는 기능을 사용할 수 밖에 없었습니다. `() => Photo`로 작성할 수도 있지만, 코드 가독성을 높이기 위해 `type => Photo`로 사용합니다. type 변수는 아무것도 포함하지 않습니다.
 
-`@JoinColumn` 데코레이터도 추가했는데, 이는 관계의 이쪽. 즉 PhotoMetadata쪽이 관계를 소유할것임을 나타냅니다. 관계는 단방향과 쌍방향일 수 있습니다. 관계사이에서 한쪽만 관계를 소유할 수 있습니다. `@JoinColumn` 데코레이터는 관계를 소유하고있는 쪽에서 표시해주면 됩니다.
+`@JoinColumn` 데코레이터도 추가했는데, 이는 관계의 이쪽. 즉 PhotoMetadata쪽이 관계를 소유할 것임을 나타냅니다. 관계는 단방향과 쌍방향일 수 있습니다. 관계사이에서 한쪽만 관계를 소유할 수 있습니다. `@JoinColumn` 데코레이터는 관계를 소유하고있는 쪽에서 표시해주면 됩니다.
 
-If you run the app, you'll see a newly generated table, and it will contain a column with a foreign key for the photo relation:
+앱을 실행하면 새로 생성된 테이블이 표시되며, photo 관계에 대한 외부 키가 있는 열이 포함됩니다 :
 
 ```shell
 +-------------+--------------+----------------------------+
@@ -1165,7 +1165,7 @@ TypeORM과의 작업 및 다른 모듈과의 통합을 단순화하는 몇 가�
 ## 기여
 
 [기여도](https://github.com/typeorm/typeorm/blob/master/CONTRIBUTING.md)와
-[개발 환경](https://github.com/typeorm/typeorm/blob/master/DEVELOPER.md)을 설정하는 방법에 대해 알아보십시오.
+[개발 환경](https://github.com/typeorm/typeorm/blob/master/DEVELOPER.md)을 설정하는 방법에 대해 알아보세요.
 
 이 프로젝트는 다음과 같은 기여를 하는 모든 사람들 덕분에 존재합니다:
 
@@ -1181,6 +1181,6 @@ TypeORM과의 작업 및 다른 모듈과의 통합을 단순화하는 몇 가�
 
 ## 골드 스폰서
 
-골드스폰서가 되어 TypeORM의 핵심기여자들로부터 프리미엄 기술지원을 받으십시오. [골드스폰서 후원하기](https://opencollective.com/typeorm)
+골드스폰서가 되어 TypeORM의 핵심기여자들로부터 프리미엄 기술지원을 받으세요! [골드스폰서 후원하기](https://opencollective.com/typeorm)
 
 <a href="https://opencollective.com/typeorm" target="_blank"><img src="https://opencollective.com/typeorm/tiers/gold-sponsor.svg?width=890"></a>
