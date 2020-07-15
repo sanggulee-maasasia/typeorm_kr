@@ -93,7 +93,7 @@ const connection: Connection = await createConnection({
 
 엔티티 생성자를 사용하는 경우 그 인수는 **optional** 해야합니다. ORM은 데이터베이스에서 로드할 때 엔티티 클래스의 인스턴스를 생성하므로, 따라서 생성자의 인수를 알지 못합니다.
 
-`@Entity` 에 대한 더 자세한 내용은 [Decorators reference](decorator-reference.md)를 참조하세요.
+`@Entity` 에 대한 더 자세한 내용은 [Decorators reference](https://typeorm.io/#/decorator-reference/)를 참조하세요.
 
 ## 엔티티 열
 

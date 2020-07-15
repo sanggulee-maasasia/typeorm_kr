@@ -47,7 +47,7 @@ createConnection({
 
 그런 다음 `getConnection`을 사용하여 앱의 모든 위치에서 연결 인스턴스를 가져올 수 있습니다.
 
-더 자세한 내용은[Connections](connection.md)를 참조하세요.
+더 자세한 내용은[Connections](../connection/working-with-connection.md)를 참조하세요.
 
 ## 스키마 동기화
 
@@ -139,7 +139,7 @@ export class Task {
 데이터베이스 테이블의 일부가 될 것인지를 정의할 수 있는 선언적인 방법을 제공합니다.
 TypeScript의 강력한 기능은 클래스에서 사용할 수 있는 유형 암시 및 기타 유용한 기능을 제공합니다.
 
-자세한 내용은 [Entities and columns](entities.md)를 참조하세요.
+자세한 내용은 [Entities and columns](../entity/entities.md)를 참조하세요.
 
 ## 다른 모델 설정
 
@@ -262,7 +262,7 @@ await employee.save();
 const employee = await Employee.preload({ id: 1, name: 'John Doe' });
 ```
 
-더 자세한 내용은 [Active Record vs Data Mapper](active-record-data-mapper.md) 및 [Repository API](repository-api.md)를 참조하세요..
+더 자세한 내용은 [Active Record vs Data Mapper](active-record-data-mapper.md) 및 [Repository API](../entityManagerAndRepository/repository-api.md)를 참조하세요..
 
 sequelize의 속성에 엑세스하려면 다음을 수행하세요 :
 
@@ -301,4 +301,4 @@ TypeORM에서는 다음을 수행합니다 :
 export class User {}
 ```
 
-더 자세한 내용은 [Indices](indices.md)를 참조하세요.
+더 자세한 내용은 [Indices](../advancedTopics/indices.md)를 참조하세요.

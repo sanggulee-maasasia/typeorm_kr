@@ -159,7 +159,7 @@ npm i typeorm mysql reflect-metadata --save
 }
 ```
 
-필요에 따라 각 옵션을 구성합니다. [connection options](./connection-options.md)에 대해 자세히 알아봅니다.
+필요에 따라 각 옵션을 구성합니다. [connection options](../connection/connection-options.md)에 대해 자세히 알아봅니다.
 
 `src/entity` 내에 `User` 엔티티를 만듭니다:
 

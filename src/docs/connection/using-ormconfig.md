@@ -10,13 +10,8 @@
 
 ## 환경설정 파일에서 새 연결 생성
 
-<!-- 번역 -->
-
-Most of the times you want to store your connection options in a separate configuration file.
-It makes it convenient and easy to manage.
-TypeORM supports multiple configuration sources.
-You only need to create a `ormconfig.[format]` file in the root directory of your application (near `package.json`),
-put your configuration there and in your app call `createConnection()` without any configuration passed:
+대부분의 경우 연결 옵션을 별도의 구성 파일에 저장하려고 합니다. 편리하고 관리가 쉽기 때문입니다.
+TypeORM은 여러 구성 소스를 지원합니다. 필요한 것은 앱의 루트 디렉토리(`package.json`이 있는 위치)에 `ormconfig.[format]` 파일을 만들고, 설정을 추가한 다음 앱에서 구성을 전달하지 않고 `createConnection()`를 호출하면 됩니다.
 
 ```typescript
 import { createConnection } from 'typeorm';
@@ -218,9 +213,8 @@ typeorm은 첫번째로 유효한 방법을 사용하며 그 이외의 다른 �
 // ormconfig에서(혹은 ENV 변수) connection 옵션을 읽어옵니다.
 const connectionOptions = await getConnectionOptions();
 
-// 번역
-// do something with connectionOptions,
-// for example append a custom naming strategy or a custom logger
+// connectionOptions에서 무엇이든 시도해보세요.
+// 사용자 지정 namingStrategy나 사용자지정 로거를 추가하는등..
 Object.assign(connectionOptions, { namingStrategy: new MyNamingStrategy() });
 
 // 수정된 옵션으로 connection 생성

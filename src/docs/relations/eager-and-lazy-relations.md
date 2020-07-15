@@ -46,8 +46,7 @@ export class Question {
 }
 ```
 
-이제 questions을 로드할 때 마다 조인이나 관계를 지정할 필요가 없어졌습니다.
-그것들은 자동으로 로드됩니다 :
+이제 questions을 로드할 때 마다 조인이나 관계를 지정할 필요가 없어졌습니다 자동으로 로드됩니다 :
 
 ```typescript
 const questionRepository = connection.getRepository(Question);
@@ -126,4 +125,4 @@ const categories = await question.categories;
 // 이제 모든 questions의 categories가 변수 "categories"에 포함됩니다.
 ```
 
-참고: 다른 언어(JAVA, PHP, etc.)에서 왔으며 게으른 관계를 사용하는데 익숙하다면 주의하십시오. 그 언어들은 비동기적이지 않고, 게으른 로딩은 다른 방식으로 이루어지기 때문에 Promise와 함께 작동하지 않습니다. JavaScript 및 NodeJs에서는 지연로드 관계를 사용하려면 promise를 사용해야 합니다. 이는 비표준 기술이며 TypeORM에서 실험적인 것으로 간주됩니다.
+참고: 다른 언어(JAVA, PHP, etc.)에서 왔으며 게으른 관계를 사용하는데 익숙하다면 주의하십시오. 그 언어들은 비동기적이지 않고, 게으른 로딩은 다른 방식으로 이루어지기 때문에 Promise와 함께 작동하지 않습니다. JavaScript 및 NodeJs에서는 지연로드 관계를 사용하려면 promise를 사용해야 합니다. 이는 비표준 기술이며 TypeORM에서 테스트를 고려하고 있습니다.

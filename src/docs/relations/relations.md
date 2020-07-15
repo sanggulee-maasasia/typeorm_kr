@@ -163,7 +163,7 @@ category: Category;
 category: Category;
 ```
 
-조인 열은 항상 일부 다른 열을 참조합니다(외래키를 사용해서). 기본적으로 관계는 항상 관련 엔티티의 기본 열을 가르킵니다. 관련 엔터티의 다른 열과 관계를 생성하려면 `@JoinColumn` 에서도 해당 열을 지정하세요.
+조인 열은 항상 일부 다른 열을 참조합니다(외래키를 통해서). 기본적으로 관계는 항상 관련 엔티티의 기본 열을 가르킵니다. 관련 엔터티의 다른 열과 관계를 생성하려면 `@JoinColumn` 에서도 해당 열을 지정하세요.
 
 ```typescript
 @ManyToOne(type => Category)
@@ -171,10 +171,10 @@ category: Category;
 category: Category;
 ```
 
-The relation now refers to `name` of the `Category` entity, instead of `id`.
-Column name for that relation will become `categoryName`.
+이 관계는 지금 `id` 대신에, `Category` 엔티티의 `name` 을 참조하고 있습니다.
+해당 관계에 대한 열의 이름은 `categoryName`이 됩니다.
 
-You can also join multiple columns. Note that they do not reference the primary column of the related entity by default: you must provide the referenced column name.
+여러 열을 조인할 수도 있습니다. 하지만 명심하세요. 기본적으로 관련 엔터티의 기본 열을 참조하지 않습니다: 참조된 열 이름을 제공해야 합니다.
 
 ```typescript
 @ManyToOne(type => Category)

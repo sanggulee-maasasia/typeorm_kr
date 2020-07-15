@@ -145,7 +145,7 @@ const driver: Driver = connection.driver;
 // 또는 사용하는 데이터베이스 드라이버에 따라 다른 드라이버로 캐스트 할 수 있습니다.
 ```
 
-- `manager` - `EntityManager` 는 connection entity와 함께 작업하는데 사용됩니다. 더 자세한 내용은 [Entity Manager and Repository](working-with-entity-manager.md)를 참조하세요.
+- `manager` - `EntityManager` 는 connection entity와 함께 작업하는데 사용됩니다. 더 자세한 내용은 [Entity Manager and Repository](../entityManagerAndRepository/working-with-entity-manager.md)를 참조하세요.
 
 ```typescript
 const manager: EntityManager = connection.manager;
@@ -153,7 +153,7 @@ const manager: EntityManager = connection.manager;
 const user = await manager.findOne(1);
 ```
 
-- `mongoManager` - `MongoEntityManager` 는 mongodb connection에서 connection entities와 함께 작업하는데 사용됩니다. MongoEntityManager에 대한 더 자세한 내용은 [MongoDB](./mongodb.md) 문서를 참조하세요.
+- `mongoManager` - `MongoEntityManager` 는 mongodb connection에서 connection entities와 함께 작업하는데 사용됩니다. MongoEntityManager에 대한 더 자세한 내용은 [MongoDB](../guides/mongodb.md) 문서를 참조하세요.
 
 ```typescript
 const manager: MongoEntityManager = connection.mongoManager;
@@ -197,20 +197,20 @@ await connection.runMigrations();
 await connection.undoLastMigration();
 ```
 
-- `hasMetadata` - 지정한 엔티티에 대한 메타데이터가 등록 돼 있는지 확인합니다. 자세한 내용은 [Entity Metadata](./entity-metadata.md)를 참조하세요.
+- `hasMetadata` - 지정한 엔티티에 대한 메타데이터가 등록 돼 있는지 확인합니다. 자세한 내용은 [Entity Metadata](https://typeorm.io/#/entity-metadata/)를 참조하세요.
 
 ```typescript
 if (connection.hasMetadata(User)) const userMetadata = connection.getMetadata(User);
 ```
 
-- `getMetadata` - 지정된 엔티티의 `EntityMetadata` 를 가져옵니다. 테이블 이름을 지정할 수도 있으며, 이러한 테이블 이름을 가진 엔티티 metadata가 발견되면 반환됩니다. 자세한 내용은 [Entity Metadata](./entity-metadata.md)를 참조하세요.
+- `getMetadata` - 지정된 엔티티의 `EntityMetadata` 를 가져옵니다. 테이블 이름을 지정할 수도 있으며, 이러한 테이블 이름을 가진 엔티티 metadata가 발견되면 반환됩니다. 자세한 내용은 [Entity Metadata](https://typeorm.io/#/entity-metadata/)를 참조하세요.
 
 ```typescript
 const userMetadata = connection.getMetadata(User);
 // user 엔티티에 대한 모든 정보를 얻을 수 있습니다.
 ```
 
-- `getRepository` - 지정된 엔티티의 `Repository` 를 가져옵니다. 테이블 이름을 지정할 수도 있으며, 이러한 테이블 이름을 가진 repository가 발견되면 반환됩니다. 자세한 내용은 [Repositories](working-with-repository.md)를 참조하세요.
+- `getRepository` - 지정된 엔티티의 `Repository` 를 가져옵니다. 테이블 이름을 지정할 수도 있으며, 이러한 테이블 이름을 가진 repository가 발견되면 반환됩니다. 자세한 내용은 [Repositories](../entityManagerAndRepository/working-with-repository.md)를 참조하세요.
 
 ```typescript
 const repository = connection.getRepository(User);
@@ -218,7 +218,7 @@ const repository = connection.getRepository(User);
 const users = await repository.findOne(1);
 ```
 
-- `getTreeRepository` - 지정된 엔티티의 `TreeRepository` 를 가져옵니다. 테이블 이름을 지정할 수도 있으며, 이러한 테이블 이름을 가진 repository가 발견되면 반환됩니다. 자세한 내용은 [Repositories](working-with-repository.md)를 참조하세요.
+- `getTreeRepository` - 지정된 엔티티의 `TreeRepository` 를 가져옵니다. 테이블 이름을 지정할 수도 있으며, 이러한 테이블 이름을 가진 repository가 발견되면 반환됩니다. 자세한 내용은 [Repositories](../entityManagerAndRepository/working-with-repository.md)를 참조하세요.
 
 ```typescript
 const repository = connection.getTreeRepository(Category);
@@ -226,7 +226,7 @@ const repository = connection.getTreeRepository(Category);
 const categories = await repository.findTrees();
 ```
 
-- `getMongoRepository` - 지정된 엔티티의 `MongoRepository` 를 가져옵니다. 이 repository는 MongoDB connection에 있는 entites에서 사용됩니다. 자세한 내용은 [MongoDB support](./mongodb.md)를 참조하세요.
+- `getMongoRepository` - 지정된 엔티티의 `MongoRepository` 를 가져옵니다. 이 repository는 MongoDB connection에 있는 entites에서 사용됩니다. 자세한 내용은 [MongoDB support](../guides/mongodb.md)를 참조하세요.
 
 ```typescript
 const repository = connection.getMongoRepository(User);
@@ -236,7 +236,7 @@ const category1 = await categoryCursor.next();
 const category2 = await categoryCursor.next();
 ```
 
-- `getCustomRepository` - 사용자 커스텀 정의 Repository를 가져옵니다. 자세한 내용은 [custom repositories](custom-repository.md)를 참조하세요.
+- `getCustomRepository` - 사용자 커스텀 정의 Repository를 가져옵니다. 자세한 내용은 [custom repositories](../entityManagerAndRepository/custom-repository.md)를 참조하세요.
 
 ```typescript
 const userRepository = connection.getCustomRepository(UserRepository);
@@ -244,8 +244,8 @@ const userRepository = connection.getCustomRepository(UserRepository);
 const crazyUsers = await userRepository.findCrazyUsers();
 ```
 
-- `transaction` - Provides a single transaction where multiple database requests will be executed in a single database transaction.
-  Learn more about [Transactions](./transactions.md).
+- `transaction` - 단일 데이터베이스 트랜잭션에서 여러 데이터베이스 요청이 실행되는 단일 트랜잭션을 제공합니다.
+  더 자세한 내용은 [Transactions](../advancedTopics/transactions.md)을 참조하세요.
 
 ```typescript
 await connection.transaction(async (manager) => {
@@ -255,13 +255,13 @@ await connection.transaction(async (manager) => {
 });
 ```
 
-- `query` - Executes a raw SQL query.
+- `query` - 원시 SQL 쿼리를 실행합니다.
 
 ```typescript
 const rawData = await connection.query(`SELECT * FROM USERS`);
 ```
 
-- `createQueryBuilder` - queryBuilder를 만듭니다. queryBuilder는 쿼리를 작성할때 사용할 수 있습니다. 자세한 내용은 [QueryBuilder](select-query-builder.md)를 참조하세요.
+- `createQueryBuilder` - queryBuilder를 만듭니다. queryBuilder는 쿼리를 작성할때 사용할 수 있습니다. 자세한 내용은 [QueryBuilder](../queryBuilder/select-query-builder.md)를 참조하세요.
 
 ```typescript
 const users = await connection
@@ -272,7 +272,7 @@ const users = await connection
   .getMany();
 ```
 
-- `createQueryRunner` - 실제 단일 데이터베이스 connection을 관리하고 작업하는데 사용되는 queryRunner를 만듭니다. 자세한 내용은 [QueryRunner](./query-runner.md)를 참조하세요.
+- `createQueryRunner` - 실제 단일 데이터베이스 connection을 관리하고 작업하는데 사용되는 queryRunner를 만듭니다. 자세한 내용은 [QueryRunner](https://typeorm.io/#/query-runner/)를 참조하세요.
 
 ```typescript
 const queryRunner = connection.createQueryRunner();

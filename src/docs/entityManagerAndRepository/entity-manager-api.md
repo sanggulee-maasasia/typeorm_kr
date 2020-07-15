@@ -28,7 +28,7 @@ await manager.transaction(async (manager) => {
 const rawData = await manager.query(`SELECT * FROM USERS`);
 ```
 
-- `createQueryBuilder` - SQL 쿼리를 빌드할때 사용할 query builder를 생성합니다. 자세한 내용은 [여기](select-query-builder.md)를 참조하세요.
+- `createQueryBuilder` - SQL 쿼리를 빌드할때 사용할 query builder를 생성합니다. 자세한 내용은 [여기](../queryBuilder/select-query-builder.md)를 참조하세요.
 
 ```typescript
 const users = await manager

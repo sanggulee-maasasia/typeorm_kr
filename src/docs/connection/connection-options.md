@@ -26,22 +26,22 @@
 
 - `extra` - 기본 드라이버에 전달할 추가 connection 옵션. 기본 데이터베이스 드라이버에 추가 설정을 전달하려면 이 옵션을 사용하세요.
 
-- `entities` - 이 connection에서 로드하고 사용할 엔티티 또는 엔티티 스키마. 엔티티 클래스, 엔티티 스키마 클래스 및 로드할 디렉토리 경로 모두 허용합니다. 디렉토리 경로의 경우에는 glob 패턴을 지원합니다. (예시: `entities: [Post, Category, "entity/*.js", "modules/**/entity/*.js"]`) Entity에 대한 자세한 내용은 [여기](./entities.md), Entity Schema의 자세한 내용은 [여기](separating-entity-definition.md)를 참조하세요.
+- `entities` - 이 connection에서 로드하고 사용할 엔티티 또는 엔티티 스키마. 엔티티 클래스, 엔티티 스키마 클래스 및 로드할 디렉토리 경로 모두 허용합니다. 디렉토리 경로의 경우에는 glob 패턴을 지원합니다. (예시: `entities: [Post, Category, "entity/*.js", "modules/**/entity/*.js"]`) Entity에 대한 자세한 내용은 [여기](../entity/entities.md), Entity Schema의 자세한 내용은 [여기](../entity/separating-entity-definition.md)를 참조하세요.
 
-- `subscribers` - connection에서 로드하고 사용할 subscribers. 엔티티 클래스와 로드할 디렉토리를 허용합니다. 디렉토리는 glob 패턴을 지원합니다. (예시: `subscribers: [PostSubscriber, AppSubscriber, "subscriber/*.js", "modules/**/subscriber/*.js"]`) Subscribers에 대한 자세한 내용은 [여기](listeners-and-subscribers.md)를 참조하세요.
+- `subscribers` - connection에서 로드하고 사용할 subscribers. 엔티티 클래스와 로드할 디렉토리를 허용합니다. 디렉토리는 glob 패턴을 지원합니다. (예시: `subscribers: [PostSubscriber, AppSubscriber, "subscriber/*.js", "modules/**/subscriber/*.js"]`) Subscribers에 대한 자세한 내용은 [여기](../advancedTopics/listeners-and-subscribers.md)를 참조하세요.
 
 - `migrations` - connection에서 로드하고 사용할 Migrations. migration 클래스와 디렉토리를 허용합니다. 디렉토리는 glob 패턴을 지원합니다.
   (예시 : `migrations: [FirstMigration, SecondMigration, "migration/*.js", "modules/**/migration/*.js"]`)
-  Migrations에 대한 자세한 내용은 [여기]](./migrations.md)를 참조하세요.
+  Migrations에 대한 자세한 내용은 [여기](../advancedTopics/migrations.md)를 참조하세요.
 
-- `logging` - 로깅 여부를 나타냅니다. 설정값이 `true` 일 경우 쿼리와 에러 로깅을 활성화합니다. 다른 로깅을 활성화하도록 할 수도 있습니다. (예시: ["query", "error", "schema"]) Logging에 대한 자세한 내용은 [여기](./logging.md)를 참조하세요.
+- `logging` - 로깅 여부를 나타냅니다. 설정값이 `true` 일 경우 쿼리와 에러 로깅을 활성화합니다. 다른 로깅을 활성화하도록 할 수도 있습니다. (예시: ["query", "error", "schema"]) Logging에 대한 자세한 내용은 [여기](../advancedTopics/logging.md)를 참조하세요.
 
-- `logger` - 로깅을 위해 사용할 로거. 사용 가능한 값은 "advanced-console", "simple-console", "file". 기본값은 "advanced-console" 입니다. `Logger` 인터페이스를 구현하는 logger 클래스를 지정할 수도 있습니다. logger에 대한 자세한 내용은 [여기](./logging.md)를 참조하세요.
+- `logger` - 로깅을 위해 사용할 로거. 사용 가능한 값은 "advanced-console", "simple-console", "file". 기본값은 "advanced-console" 입니다. `Logger` 인터페이스를 구현하는 logger 클래스를 지정할 수도 있습니다. logger에 대한 자세한 내용은 [여기](../advancedTopics/logging.md)를 참조하세요.
 
 - `maxQueryExecutionTime` - 쿼리 실행 시간이 지정된 최대 실행 시간(milliseconds)을 초과하면 logger가 이 쿼리를 기록합니다.
 
 - `namingStrategy` - Naming Strategy는 데이터베이스에서 테이블과 열의 이름을 정할때 사용됩니다. Naming Strategy에 대한 자세한 내용은
-  [여기](./naming-strategy.md)를 참조하세요.
+  [여기](https://typeorm.io/#/naming-strategy/)를 참조하세요.
 
 - `entityPrefix` - 이 데이터베이스 connection의 모든 테이블 (혹은 콜렉션)에 문자열 접두어를 지정합니다.
 
@@ -55,7 +55,7 @@
 
 - `migrationsTableName` - 실행된 migration의 정보를 담고있는 데이터베이스 테이블의 이름입니다. 기본적으로 이 테이블을 "migrations"라고 부릅니다.
 
-- `cache` - 엔티티 결과를 캐싱하도록 설정합니다. 여기서 캐시 탕비이나 다른 캐시 옵션을 구현 할 수도 있습니다. 캐싱에 관한 자세한 내용은 [여기](./caching.md)를 참조하세요.
+- `cache` - 엔티티 결과를 캐싱하도록 설정합니다. 여기서 캐시 탕비이나 다른 캐시 옵션을 구현 할 수도 있습니다. 캐싱에 관한 자세한 내용은 [여기](../queryBuilder/caching.md)를 참조하세요.
 
 - `cli.entitiesDir` - CLI에서 기본적으로 entities를 생성해야 하는 디렉토리입니다.
 
@@ -97,18 +97,16 @@
 
 - `debug` - 프로토콜의 세부정보를 stdout으로 출력합니다. true / false 혹은 출력해야하는 패킷타입의 이름 배열일 수 있습니다.(기본값: `false`)
 
-<!-- 번역 -->
+* `trace` - 에러에 library entrance의 site("long stack traces")를 포함하는 stack traces를 생성합니다.
+  대부분의 호출에 대해 약간의 성능 저하가 발생합니다. (기본값: `true`)
 
-- `trace` - Generates stack traces on Error to include call site of library entrance ("long stack traces").
-  Slight performance penalty for most calls. (Default: `true`)
+* `multipleStatements` - 쿼리마다 여러 mysql문을 허용합니다. sql injection 공격의 범위가 늘어날 수 있으니 주의하십시오. (기본값: `false`)
 
-- `multipleStatements` - 쿼리마다 여러 mysql문을 허용합니다. sql injection 공격의 범위가 늘어날 수 있으니 주의하십시오. (기본값: `false`)
+* `legacySpatialSupport` - mysql 8에서 삭제된 GeomFromText 및 AsText와 같은 공간함수를 사용합니다. (기본값: `true`)
 
-- `legacySpatialSupport` - mysql 8에서 삭제된 GeomFromText 및 AsText와 같은 공간함수를 사용합니다. (기본값: `true`)
+- `flags` - 기본 연결 플래그가 아닌 다른 연결 플래그의 목록. 기본 연결 플래그를 블랙리스트에 추가할 수도 있습니다. [connection Flags](https://github.com/mysqljs/mysql#connection-flags)에 대한 더 자세한 내용은 여기를 참조하세요.
 
-* `flags` - 기본 연결 플래그가 아닌 다른 연결 플래그의 목록. 기본 연결 플래그를 블랙리스트에 추가할 수도 있습니다. [connection Flags](https://github.com/mysqljs/mysql#connection-flags)에 대한 더 자세한 내용은 여기를 참조하세요.
-
-- `ssl` - ssl 파라미터가 있는 객체 또는 ssl 프로파일 이름을 포함하는 문자열. [SSL 옵션](https://github.com/mysqljs/mysql#ssl-options)을 참조하세요.
+* `ssl` - ssl 파라미터가 있는 객체 또는 ssl 프로파일 이름을 포함하는 문자열. [SSL 옵션](https://github.com/mysqljs/mysql#ssl-options)을 참조하세요.
 
 ## `postgres` / `cockroachdb` connection 옵션
 
@@ -321,6 +319,8 @@
 - `haInterval` - 각각의 replicaset 상태 체크 사이의 시간 (기본값: `10000,5000`).
 
 - `replicaSet` - 연결 할 replicaSet의 이름.
+
+<!-- -->
 
 - `acceptableLatencyMS` - Sets the range of servers to pick when using NEAREST (lowest ping ms + the latency fence,
   ex: range of 1 to (1 + 15) ms). Default: `15`.

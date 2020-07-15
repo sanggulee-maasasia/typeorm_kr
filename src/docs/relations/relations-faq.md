@@ -137,7 +137,7 @@ const user = await connection
 
 `QueryBuilder`를 사용하여 `leftJoinAndSelect` 대신에 `innerJoinAndSelect` 를 사용할 수 있습니다(`LEFT JOIN` 과 `INNER JOIN`의 차이점은 사용중인 SQL 문서를 참조하세요). 상태와 생성 순서 등에 따라 관계 데이터를 조인할 수 있습니다.
 
-QueryBuilder에 대해 더 자세한 내용은 [`여기`](select-query-builder.md)를 참조하세요.
+QueryBuilder에 대해 더 자세한 내용은 [`여기`](../queryBuilder/select-query-builder.md)를 참조하세요.
 
 ## 관계 속성에 대한 초기화 방지
 

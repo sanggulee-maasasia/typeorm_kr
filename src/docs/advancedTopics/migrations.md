@@ -51,7 +51,7 @@ TypeORM은 이러한 SQL 쿼리를 작성하고 필요할 때 실행할 수 있�
 
 ## 새 마이그레이션 만들기
 
-**전제조건**: [CLI 설치](./using-cli.md#installing-cli)
+**전제조건**: [CLI 설치](https://typeorm.io/#/using-cli/installing-cli)
 
 새 마이그레이션을 생성하기 전에 연결 옵션을 올바르게 설정해야 합니다 :
 
@@ -105,7 +105,7 @@ export class PostRefactoringTIMESTAMP implements MigrationInterface {
 `up`에는 마이그레이션을 수행하는 데 필요한 코드가 포함되어 있어야 합니다.
 `down`은 변경된 `up`을 되돌려야 합니다. `down` 메서드는 마지막 마이그레이션을 되돌리는 데 사용됩니다.
 
-`up`과 `down` 둘 다 안에 `QueryRunner` 개체가 있습니다. 모든 데이터베이스 작업은 이 개체를 사용하여 실행됩니다.[query runner](./query-runner.md)에 대해 자세히 알아봅니다.
+`up`과 `down` 둘 다 안에 `QueryRunner` 개체가 있습니다. 모든 데이터베이스 작업은 이 개체를 사용하여 실행됩니다.[query runner](https://typeorm.io/#/query-runner/)에 대해 자세히 알아봅니다.
 
 `Post` 변경 내용을 통해 마이그레이션에 대해 알아보겠습니다:
 

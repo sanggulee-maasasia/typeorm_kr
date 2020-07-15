@@ -1,9 +1,9 @@
-# 연결(Connection) 작업     
+# 연결(Connection) 작업
 
 - [`Connection` 이란](#connection-이란)
-- [연결(connection) 생성](#연결(connection)-생성)
-- [`연결 관리자(ConnectionManager)` 사용](#연결-관리자(ConnectionManager)-사용)
-- [연결(connection) 작업](#연결(connection)-작업하기)
+- [연결(connection) 생성](<#연결(connection)-생성>)
+- [`연결 관리자(ConnectionManager)` 사용](<#연결-관리자(ConnectionManager)-사용>)
+- [연결(connection) 작업](<#연결(connection)-작업하기>)
 
 ## `Connection` 이란
 
@@ -161,7 +161,7 @@ export class UserController {
 
 `ConnectionManager#get` 으로도 connection을 얻을수 있지만, 대부분의 경우에는 `getConnection()` 으로도 충분히 connection을 얻을 수 있습니다.
 
-connection을 사용하여 엔티티, 특히 connection의 `EntityManager` 및 `Repository`를 사용하여 데이터베이스 작업을 실행하십시오. 자세한 내용은 [Entity Manager and Repository](working-with-entity-manager.md) 설명서를 참조하십시오.
+connection을 사용하여 엔티티, 특히 connection의 `EntityManager` 및 `Repository`를 사용하여 데이터베이스 작업을 실행하십시오. 자세한 내용은 [Entity Manager and Repository](../entityManagerAndRepository/working-with-entity-manager.md) 설명서를 참조하십시오.
 
 그러나 일반적으로, `connection`은 많이 사용하지 않습니다. 대부분의 경우 connection 객체를 직접 사용하지 않고 `getRepository()` 나 `getManager()` 를 사용하여 connection manager나 repository에 접근할 수 있습니다.
 

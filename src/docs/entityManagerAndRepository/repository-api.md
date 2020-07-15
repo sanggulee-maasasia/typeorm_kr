@@ -12,7 +12,7 @@
 const manager = repository.manager;
 ```
 
-- `metadata` - 이 repository에서 관리하는 엔티티의 `EntityMetadata`입니다. 더 자세한 내용은 [transactions in Entity Metadata](./entity-metadata.md)를 참조하세요.
+- `metadata` - 이 repository에서 관리하는 엔티티의 `EntityMetadata`입니다. 더 자세한 내용은 [transactions in Entity Metadata](https://typeorm.io/#/entity-metadata/)를 참조하세요.
 
 ```typescript
 const metadata = repository.metadata;
@@ -30,7 +30,7 @@ const queryRunner = repository.queryRunner;
 const target = repository.target;
 ```
 
-- `createQueryBuilder` - SQL 쿼리를 빌드할때 사용하는 query builder를 생성합니다. 더 자세한 내용은 [QueryBuilder](select-query-builder.md)를 참조하세요.
+- `createQueryBuilder` - SQL 쿼리를 빌드할때 사용하는 query builder를 생성합니다. 더 자세한 내용은 [QueryBuilder](../queryBuilder/select-query-builder.md)를 참조하세요.
 
 ```typescript
 const users = await repository.createQueryBuilder('user').where('user.name = :name', { name: 'John' }).getMany();
@@ -260,8 +260,8 @@ userRepository.remove(users, { chunk: entities.length / 1000 });
 
 ## `TreeRepository` API
 
-`TreeRepository`에 대한 API는 [the Tree Entities documentation](./tree-entities.md#working-with-tree-entities)를 참조하세요.
+`TreeRepository`에 대한 API는 [the Tree Entities documentation](../entity/tree-entities.md#트리-엔티티-작업)를 참조하세요.
 
 ## `MongoRepository` API
 
-`MongoRepository`에 대한 API는 [the MongoDB documentation](./mongodb.md)를 참조하세요.
+`MongoRepository`에 대한 API는 [the MongoDB documentation](../guides/mongodb.md)를 참조하세요.

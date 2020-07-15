@@ -1,7 +1,3 @@
-<!--
-번역: 애매하게 번역되는것이거나 감이 잡히지않는것들
-link: 아직 생성되지 않은 파일이거나 링크 이름이 다를경우 수정이 필요할때
- -->
 <div align="center">
   <a href="http://typeorm.io/">
     <img src="https://github.com/typeorm/typeorm/raw/master/resources/logo_big.png" width="492" height="228">
@@ -30,13 +26,13 @@ link: 아직 생성되지 않은 파일이거나 링크 이름이 다를경우 �
 TypeORM은 NodeJs, Browser, Cordova, PhoneGap, Ionic, React Native, NativeScript, Expo, Electron 플랫폼에서 실행할 수 있는 [ORM](https://en.wikipedia.org/wiki/Object-relational_mapping)으로, Typescript와 Javascript(ES5,ES6,ES7,ES8)로 사용할 수 있습니다.
 우리의 목표는 항상 최신 Javascript 기능을 지원하고 테이블이 몇 개 없는 작은 애플리케이션부터 다중 데이터베이스를 사용하는 대규모 엔터프라이즈 애플리케이션까지 데이터베이스를 사용하는 모든 종류의 애플리케이션을 개발할 수 있도록 추가 기능을 제공하는 것입니다.
 
-TypeORM은 현존하는 Javascript ORM들과는 다르게, [Active Record](./docs/active-record-data-mapper.md#what-is-the-active-record-pattern), [Data Mapper](./docs/active-record-data-mapper.md#what-is-the-data-mapper-pattern) 패턴을 지원합니다. 이는 여러분들이 높은 퀄리티의 느슨한 결합을 지원하고 확장가능하며 유지보수가 가능한 애플리케이션을 가장 생산적인 방법으로 작성할 수 있다는것을 의미합니다.
+TypeORM은 현존하는 Javascript ORM들과는 다르게, [Active Record](./src/docs/guides/active-record-data-mapper.md#Active-Record-패턴이란?), [Data Mapper](./src/docs/guides/active-record-data-mapper.md#Data-mapper-패턴이란?) 패턴을 지원합니다. 이는 여러분들이 높은 퀄리티의 느슨한 결합을 지원하고 확장가능하며 유지보수가 가능한 애플리케이션을 가장 생산적인 방법으로 작성할 수 있다는것을 의미합니다.
 
 TypeORM은 [Hibernate](http://hibernate.org/orm/), [Doctrine](http://www.doctrine-project.org/), [Entity Framework](https://www.asp.net/entity-framework)와 같은 ORM들에 많은 영향을 받았습니다.
 
 TypeORM의 몇가지 특징을 꼽자면 :
 
-- [DataMapper](./docs/active-record-data-mapper.md#what-is-the-data-mapper-pattern)와 [ActiveRecord](./docs/active-record-data-mapper.md#what-is-the-active-record-pattern) 둘다 지원합니다. (선택하세요)
+- [DataMapper](./src/docs/guides/active-record-data-mapper.md#Data-mapper-패턴이란?)와 [ActiveRecord](./src/docs/guides/active-record-data-mapper.md#Active-Record-패턴이란?) 둘다 지원합니다. (선택하세요)
 - entities와 columns
 - 데이터베이스별 column 타입들
 - 엔티티 관리자(Entity manager)
@@ -57,8 +53,8 @@ TypeORM의 몇가지 특징을 꼽자면 :
 - 우아한 문법과 유연하고 강력한 QueryBuilder
 - left join과 inner joins
 - 조인을 사용해 쿼리에 적절한 페이지 지정
-- query caching
-- streaming raw results <!-- 번역 -->
+- 쿼리 캐싱
+- 원시 결과값 스트리밍
 - 로깅(logging)
 - 청취자(listeners)와 구독자(subscribers) (hooks)
 - 테이블 폐쇄 패턴(closure table pattern) 지원
@@ -465,10 +461,8 @@ export class Photo {
 }
 ```
 
-<!-- link 수정필요 -->
-
 데이터베이스마다 열의 타입이 다릅니다. 데이터베이스가 지원하는 모든 타입을 사용할 수 있습니다. 지원하는 열의 타입에 대한 더 많은 정보는
-[여기](./docs/entities.md#column-types)를 참조하세요.
+[여기](./src/docs/entity/entities.md#열-타입)를 참조하세요.
 
 ### 데이터베이스 연결 만들기
 
@@ -614,7 +608,7 @@ createConnection(/*...*/)
 
 `savedPhotos`는 데이터베이스에서 가져온 데이터가 있는 Photo 객체 배열이 됩니다.
 
-EntityManager에 대한 더 자세한 부분은 [여기](./docs/working-with-entity-manager.md)를 참조하세요.
+EntityManager에 대한 더 자세한 부분은 [여기](./src/docs/entityManagerAndRepository/working-with-entity-manager.md)를 참조하세요.
 
 ### 저장소(Repository) 사용하기
 
@@ -644,7 +638,7 @@ createConnection(/*...*/)
   .catch((error) => console.log(error));
 ```
 
-Repository에 대한 자세한 정보는 [여기](./docs/working-with-repository.md)를 참조하세요.
+Repository에 대한 자세한 정보는 [여기](./src/docs/entityManagerAndRepository/working-with-repository.md)를 참조하세요.
 
 ### 데이터베이스에서 데이터 가져오기
 
@@ -869,7 +863,7 @@ createConnection(/*...*/)
   .catch((error) => console.log(error));
 ```
 
-여기서는 photos에 데이터베이스의 사진배열이 포함되며 각각의 photo에는 photometadata가 포함됩니다. Find 옵션에 대한 더 자세한 부분은 [이 지침서](./docs/find-options.md)를 참조하세요.
+여기서는 photos에 데이터베이스의 사진배열이 포함되며 각각의 photo에는 photometadata가 포함됩니다. Find 옵션에 대한 더 자세한 부분은 [이 지침서](./src/docs/entityManagerAndRepository/find-options.md)를 참조하세요.
 
 find 옵션을 사용하는건 편하고 간단하지만, 좀 더 복잡한 쿼리를 원한다면 `QueryBuilder`를 대신 사용해야 합니다. `QueryBuilder`를 사용하면 보다 복합적인 쿼리를 우아하게 사용할 수 있습니다 :
 
@@ -1135,7 +1129,7 @@ let photos = await connection
 10개의 결과만 선택합니다 (페이지네이션 제한). 선택된 결과들은 id 내림차순으로 정렬됩니다.
 photo의 album이랑은 left-join을, metadata와는 innerjoin합니다.
 
-애플리케이션을 작성하면서 queryBuilder를 자주 쓰이게 될 것입니다. QueryBuilder에 대한 자세한 내용은 [여기](./docs/select-query-builder.md)를 참조하세요.
+애플리케이션을 작성하면서 queryBuilder를 자주 쓰이게 될 것입니다. QueryBuilder에 대한 자세한 내용은 [여기](./src/docs/queryBuilder/select-query-builder.md)를 참조하세요.
 
 ## 예시
 

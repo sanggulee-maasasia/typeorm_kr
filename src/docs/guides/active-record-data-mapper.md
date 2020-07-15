@@ -170,7 +170,7 @@ const userRepository = connection.getCustomRepository(UserRepository);
 const timber = await userRepository.findByName('Timber', 'Saw');
 ```
 
-더 자세한 내용은 [custom repositories](custom-repository.md)를 참조하세요.
+더 자세한 내용은 [custom repositories](../entityManagerAndRepository/custom-repository.md)를 참조하세요.
 
 ## 어떤걸 선택해야 하나요?
 

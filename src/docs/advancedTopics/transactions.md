@@ -155,4 +155,4 @@ try {
 - `commitTransaction` - query runner 인스턴스를 사용하여 변경한 모든 내용을 커밋합니다.
 - `rollbackTransaction` - query runner 인스턴스를 사용하여 변경한 모든 내용을 롤백합니다.
 
-더 자세한 내용은 [Query Runner](./query-runner.md)를 참조하세요.
+더 자세한 내용은 [Query Runner](https://typeorm.io/#/query-runner/)를 참조하세요.
